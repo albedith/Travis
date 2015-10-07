@@ -10,6 +10,6 @@ These are the steps that I had to follow in order to get the Sauce Labs + Travis
 7. Follow the instructions here: https://docs.saucelabs.com/ci-integrations/travis-ci/#adding-credentials-for-a-public-github-repo
 8. Copy and add your encypted Sauce Labs credential in the ".travis.yml" file
 9. Add your tests to the Travis repository
-10. Edit the ".travis.yml" file with your tests details
+10. Edit the ".travis.yml" file with your tests details. This helped me out to understand what I had to do: http://docs.travis-ci.com/user/languages/python/
 11. Add/Commit and Push your changes - This will trigger the Travis build to run
 12. Spy on your running build (e.g https://travis-ci.org/albedithdiaz/Travis)
