@@ -20,18 +20,18 @@ driver.implicitly_wait(30)
 
 driver.get('http://google.com') 
 title = driver.title
-assertEquals("Google", title)  
+assert "Google", title 
 
 time.sleep(10)
 
 driver.get('https://www.saucelabs.com')
 title = driver.title
-assertEquals("Sauce Labs: Selenium Testing, Mobile Testing, JS Unit Testing and More", title) 
+assert "Sauce Labs: Selenium Testing, Mobile Testing, JS Unit Testing and More", title
 
 time.sleep(10)
 
 driver.get('http://www.theuselessweb.com/')
 title = driver.title
-assertEquals("The Useless Web", title) 
+assert "The Useless Web", title
 
 driver.quit()
