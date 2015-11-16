@@ -14,13 +14,14 @@ desired_capabilities = {}
 desired_capabilities['platform'] = 'linux'
 desired_capabilities['version'] = '44'
 desired_capabilities['browserName'] = 'Chrome'
+desired_capabilities['tunnel-identifier'] = os.environ.get('TRAVIS_JOB_NUMBER')
 
 driver = webdriver.Remote(command_executor = ('http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub'), desired_capabilities = desired_capabilities)
-driver.implicitly_wait(30)    
+driver.implicitly_wait(30)
 
-driver.get('http://google.com') 
+driver.get('http://google.com')
 title = driver.title
-assert "Google", title 
+assert "Google", title
 
 time.sleep(10)
 
